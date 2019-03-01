@@ -1,0 +1,29 @@
+@media only screen and (max-width: 1600px){
+	.left_panel .left_cont{border-right: 90vh solid transparent;}
+}
+@media only screen and (max-width: 1500px){
+	.left_panel .left_cont{border-right: 80vh solid transparent;}
+	.left_cont img{left: 22%; width: 55%;}
+}
+@media only screen and (max-width: 1280px) and (max-height: 950px){
+	.left_panel .left_cont{border-right: 70vh solid transparent;}
+	.left_cont img{
+		top: 28%;
+    	left: 26%;
+    	width: 55%;
+	}
+	.right_panel .right_cont h4{font: 32px/36px Monts-Med;}
+	.right_cont form input, .right_cont button{width: 60%;}
+
+}
+@media only screen and (max-width: 1280px) and (max-height: 800px){
+	.left_panel .left_cont{border-right: 80vh solid transparent;}
+	.left_cont img{
+		top: 28%;
+    	left: 26%;
+    	width: 55%;
+	}
+	.right_panel .right_cont h4{font: 32px/36px Monts-Med;}
+	.right_cont form input, .right_cont button{width: 60%;}
+
+}
