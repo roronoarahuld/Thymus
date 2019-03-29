@@ -1,5 +1,9 @@
 @media only screen and (max-width: 1600px){
 	.left_panel .left_cont{border-right: 90vh solid transparent;}
+	.content-panel .online-user{height: 74vh;}
+	.online-user h6, .online-user .code, .online-user .waiting-time_r, .online-user .waiting-time_g,
+	.info .online_info, .info .ofline_info {font: 13px/17px gothic;}
+	.workarea_cont span{font: 18px/22px gothic;}
 }
 @media only screen and (max-width: 1500px){
 	.left_panel .left_cont{border-right: 80vh solid transparent;}
