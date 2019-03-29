@@ -3,13 +3,24 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-input:focus, textarea:focus, button:focus, button:active, a:focus, a:active{
+.clearfix:after{clear: both;content: '.';display: block;visibility: hidden;height: 0;font-size: 0}
+.clearfix{display: block;}
+input:focus, textarea:focus, button:focus, button:active, a:focus, a:active, select, select:focus{
 	outline: none;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
+    border-color: transparent;
+}
+::-webkit-scrollbar{
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 a, a:hover{text-decoration: none;}
+@font-face{
+	src: url("../fonts/CenturyGothic.ttf");
+	font-family: gothic;
+}
 @font-face{
 	src: url("../fonts/Montserrat-Regular.ttf");
 	font-family: Monts-reg;
@@ -91,4 +102,129 @@ a, a:hover{text-decoration: none;}
 }
 .right_cont span a{
 	color: #0a415f;
+}
+.content-panel{background-color: #f2f5f7; height: 100vh; overflow-y: scroll;}
+/*---------------------------------------------------------Side Bar----------------------------------------------------------------*/
+.side-bar{
+	background-color: #fff;
+	height: 100vh;
+	text-align: center;
+}
+.side-bar .logo{padding: 3% 0 35%;}
+.side-bar .logo img{width: 80%;}
+.side-bar ul{list-style: none;}
+.side-bar .menu-li{padding: 0 0 35px}
+.side-bar .option-li{padding: 45px 0 0;}
+.side-bar .menu-li li, .side-bar .option-li li{padding: 15px 0;}
+.divider{border: 1px solid #eee;}
+/*---------------------------------------------------------User Waiting and call----------------------------------------------------------------*/
+.content-panel .call-logs{padding: 25px 8px;}
+.content-panel .call-logs i{font-size: 30px;}
+.content-panel .call-logs .msg i{color: #00304e;}
+.content-panel .call-logs .call i{color: #2ea217;}
+.content-panel .call-logs .call-disconnect i{color: #a21d17;}
+.content-panel .online-user{
+	background-color: #fff;
+	padding: 20px 15px;
+	height: 78vh;
+	overflow: scroll;
+}
+.content-panel .online-user::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+.content-panel .online-user ul{list-style: none;}
+.content-panel .online-user ul li{padding: 24px 0;}
+.online-user .waiting-time_r{
+	color: #a21d17;
+	float: right;
+	font: 17px/21px gothic;
+}
+.online-user .waiting-time_g{
+	color: #2ea217;
+	float: right;
+	font: 17px/21px gothic;
+}
+.online-user .code{
+	color: #898989;
+	float: left;
+	font: 17px/21px gothic;
+}
+.online-user h6{
+	color: #00304e;
+	font: 17px/21px gothic;
+	cursor: pointer;
+}
+.info{background-color: #fff;}
+.info .online_info, .info .ofline_info{padding: 12px; font: 17px/21px Monts-reg; cursor: pointer;}
+.info .online_info .info-text, .info .ofline_info .info-text{
+	color: #000;
+	float: left;
+	padding: 8px;
+}
+.info .online_info .info_num, .info .ofline_info .info_num{
+	padding: 8px 12px;
+	float: right;
+	background-color: #00304e;
+	color: #fff;
+	border-radius: 50px;
+}
+.clicked{
+	background-color: #10b6ea;
+}
+.clicked_info_num{
+	background-color: #fff !important;
+	color: #00304e !important;
+}
+.clicked_info_text{
+	color: #fff !important;
+}
+.top-header{padding: 25px 8px;}
+.top-header .name_doc{
+	font: 24px/28px Monts-Med;
+	color: #00304e;
+}
+.mainwork_area{height: 100vh; overflow-y: scroll;}
+.mainwork_area .workarea .workarea_cont{padding: 15px 10px;}
+.workarea_cont span{
+	font: 22px/26px gothic;
+	color: #a4a4a4;
+	margin-bottom: 1rem;
+	display: inline-block;
+}
+.workarea_cont .head-date{float: right;}
+.workarea_cont .workarea_div{
+	padding: 22px;
+	background-color: #fff;
+}
+.workarea_div label{
+	display: block;
+	font: 16px/20px Monts-Med;
+	color: #00304e;
+}
+.workarea_div input, .workarea_div select{
+	width: 100%;
+	padding: 8px;
+	font: 14px/19px Monts-reg;
+	background-color: #f2f5f7;
+	border: none;
+}
+.workarea_div select:focus{
+	background-color: #f2f5f7;
+	border-color: transparent;
+}
+.mainwork_area .sub-btn{text-align: center;}
+.mainwork_area .sub-btn button{
+	padding: 12px 108px;
+	margin: 1rem 0;
+	background-color: #10b6ea;
+	border: none;
+	color: #fff;
+	font: 16px/20px 'Monts-reg';
+	border-radius: 50px;
+	cursor: pointer;
+}
+.mainwork_area .more_info_smoking, .mainwork_area .more_info_alcohol{
+	border-top: 1px solid #eee;
+	display: none;
 }
